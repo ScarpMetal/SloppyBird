@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C9EC3F491F142C6600DE5E30 /* FlappyFont.TTF in Resources */ = {isa = PBXBuildFile; fileRef = C9EC3F481F142C6600DE5E30 /* FlappyFont.TTF */; };
+		E27974631F150A50005FFFF7 /* FlappyFont.TTF in Resources */ = {isa = PBXBuildFile; fileRef = E27974621F150A50005FFFF7 /* FlappyFont.TTF */; };
 		E2D0FDC51F13CAD300F3E138 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D0FDC41F13CAD300F3E138 /* AppDelegate.swift */; };
 		E2D0FDC71F13CAD300F3E138 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = E2D0FDC61F13CAD300F3E138 /* GameScene.sks */; };
 		E2D0FDC91F13CAD300F3E138 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = E2D0FDC81F13CAD300F3E138 /* Actions.sks */; };
@@ -19,7 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		C9EC3F481F142C6600DE5E30 /* FlappyFont.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; name = FlappyFont.TTF; path = ../../../Desktop/FlappyFont.TTF; sourceTree = "<group>"; };
+		E27974621F150A50005FFFF7 /* FlappyFont.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = FlappyFont.TTF; sourceTree = "<group>"; };
 		E2D0FDC11F13CAD300F3E138 /* SloppyBird.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SloppyBird.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2D0FDC41F13CAD300F3E138 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E2D0FDC61F13CAD300F3E138 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -68,7 +68,7 @@
 				E2D0FDCA1F13CAD300F3E138 /* GameScene.swift */,
 				E2D0FDCC1F13CAD300F3E138 /* GameViewController.swift */,
 				E2D0FDCE1F13CAD300F3E138 /* Main.storyboard */,
-				C9EC3F481F142C6600DE5E30 /* FlappyFont.TTF */,
+				E27974621F150A50005FFFF7 /* FlappyFont.TTF */,
 				E2D0FDD11F13CAD300F3E138 /* Assets.xcassets */,
 				E2D0FDD31F13CAD300F3E138 /* LaunchScreen.storyboard */,
 				E2D0FDD61F13CAD300F3E138 /* Info.plist */,
@@ -137,7 +137,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2D0FDD01F13CAD300F3E138 /* Main.storyboard in Resources */,
-				C9EC3F491F142C6600DE5E30 /* FlappyFont.TTF in Resources */,
+				E27974631F150A50005FFFF7 /* FlappyFont.TTF in Resources */,
 				E2D0FDC71F13CAD300F3E138 /* GameScene.sks in Resources */,
 				E2D0FDD21F13CAD300F3E138 /* Assets.xcassets in Resources */,
 				E2D0FDD51F13CAD300F3E138 /* LaunchScreen.storyboard in Resources */,
