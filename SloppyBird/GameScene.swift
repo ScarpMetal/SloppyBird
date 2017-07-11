@@ -16,7 +16,8 @@ struct BodyType {
     static let BottomPipe : UInt32 = 3
     static let PointBar : UInt32 = 4
     static let BulletBill : UInt32 = 5
-    static let Ground : UInt32 = 6
+    static let BulletBillTop : UInt32 = 6
+    static let Ground : UInt32 = 7
 }
 
 struct GameState {
@@ -110,6 +111,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate{
         bird.physicsBody?.collisionBitMask = 0
         bird.physicsBody?.usesPreciseCollisionDetection = true
         bird.physicsBody?.mass = 1
+        
         
         addChild(bird)
         
@@ -216,7 +218,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate{
     }
     
     func birdHitPointBar(bird: SKSpriteNode, pointBar: SKSpriteNode){
-        if score == 2{
+        if score == 1{
             gameState = GameState.SpawningBulletBills
             removeAction(forKey: "SpawnPipes")
             startBulletBillSequence()
@@ -376,12 +378,21 @@ class GameScene: SKScene, SKPhysicsContactDelegate{
         let bullet = SKSpriteNode(imageNamed: "bulletbill")
         bullet.size = CGSize(width: 60, height: 52)
         
-        bullet.physicsBody = SKPhysicsBody(circleOfRadius: 28)
-        bullet.physicsBody?.categoryBitMask = BodyType.BulletBill
-        bullet.physicsBody?.contactTestBitMask = BodyType.Bird
-        bullet.physicsBody?.collisionBitMask = 0
-        bullet.physicsBody?.usesPreciseCollisionDetection = true
-        bullet.physicsBody?.affectedByGravity = false
+        let bulletPBodyMain = SKPhysicsBody(circleOfRadius: 28)
+        bulletPBodyMain.categoryBitMask = BodyType.BulletBill
+        bulletPBodyMain.contactTestBitMask = BodyType.Bird
+        bulletPBodyMain.collisionBitMask = 0
+        bulletPBodyMain.usesPreciseCollisionDetection = true
+        bulletPBodyMain.affectedByGravity = false
+        
+        let bulletPBodyTop = SKPhysicsBody(rectangleOf: CGSize(width: 50, height: 10), center: CGPoint(x: 10, y: 30))
+        bulletPBodyTop.categoryBitMask = BodyType.BulletBillTop
+        bulletPBodyTop.contactTestBitMask = BodyType.Bird
+        bulletPBodyTop.collisionBitMask = 0
+        bulletPBodyTop.usesPreciseCollisionDetection = true
+        bulletPBodyTop.affectedByGravity = false
+        
+        bullet.physicsBody = SKPhysicsBody(bodies: [bulletPBodyMain, bulletPBodyTop])
         
         let recoilAction = SKAction.sequence([
             SKAction.wait(forDuration: 0.4),
