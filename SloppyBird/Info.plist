@@ -44,7 +44,7 @@
 	</array>
 	<key>UIAppFonts</key>
 	<array>
-		<string>FlappyBirdy.ttf</string>
+		<string>FlappyFont.TTF</string>
 	</array>
 </dict>
 </plist>
